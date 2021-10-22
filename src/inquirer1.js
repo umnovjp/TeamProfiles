@@ -1,10 +1,11 @@
 const inquirer = require('inquirer');
 
 const promptManager = () => {
+  
   return inquirer.prompt([
     {
       type: 'input',
-      name: 'managerName',
+      name: 'managerName', // changed managerName to name
       message: 'please enter name of the project manager',
     },
     {
@@ -22,7 +23,8 @@ const promptManager = () => {
       name: 'officeNumber',
       message: 'please enter the office number',
     }
-  ]);
+  ])
+  ;
 };
 
 const addEngineer = teamData => {
@@ -60,8 +62,7 @@ const addEngineer = teamData => {
           },
         ])
       }
-    })// .then(memberData => {
-     // teamData.members.push(memberData);
+    })
       // return addEngineer(teamData);
       //return(teamData)
    // });
