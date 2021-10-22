@@ -4,5 +4,11 @@ promptManager()
 .then(addEngineer)
 .then(addIntern)
 .then(teamData => {
+    //const dataArray = [];
+    //let managerName = teamData.managerName;
+    //let managerID = teamData.managerID;
+    //dataArray.push(managerName);
+    //dataArray.push(managerID);
+    //console.log(dataArray);
     return getManager(teamData);
   })
