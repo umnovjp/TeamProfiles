@@ -7,21 +7,25 @@ const promptManager = () => {
             type: 'input',
             name: 'managerName', // changed managerName to name
             message: 'please enter name of the project manager',
+            validate: val => /[a-z1-9]/gi.test(val),
         },
         {
             type: 'input',
             name: 'managerID',
             message: 'what is his or hers or its id?',
+            validate: val => /[1-9]/gi.test(val),
         },
         {
             type: 'input',
             name: 'managerEmail',
             message: "enter manager's email",
+            validate: val => /[a-z1-9]/gi.test(val),
         },
         {
             type: 'input',
             name: 'officeNumber',
             message: 'please enter the office number',
+            validate: val => /[1-9]/gi.test(val),
         }
     ])
         ;
