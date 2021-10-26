@@ -43,17 +43,17 @@ const addTeamMember = teamData => {
                 return inquirer.prompt([
                     {
                         type: 'input',
-                        name: 'engineerName',
+                        name: 'name0',
                         message: 'please enter name of engineer',
                     },
                     {
                         type: 'input',
-                        name: 'engineerID',
+                        name: 'id0',
                         message: 'please enter his or her id',
                     },
                     {
                         type: 'input',
-                        name: 'engineerEmail',
+                        name: 'email0',
                         message: 'please enter the email address',
                     },
                     {
@@ -61,29 +61,23 @@ const addTeamMember = teamData => {
                         name: 'engineerGithub',
                         message: 'please enter github username',
                     },
-                    {
-                        type: 'list',
-                        name: 'type',
-                        message: 'Do you want to add another member to your team?',
-                        choices: ["y", "n"]
-                    }
                 ])
             }
             else {
                 return inquirer.prompt([
                     {
                         type: 'input',
-                        name: 'internName',
+                        name: 'name0',
                         message: "please enter name of intern",
                     },
                     {
                         type: 'input',
-                        name: 'internID',
+                        name: 'id0',
                         message: "please enter his or her id",
                     },
                     {
                         type: 'input',
-                        name: 'internEmail',
+                        name: 'email0',
                         message: 'please enter email of the intern',
                     },
                     {
@@ -96,134 +90,4 @@ const addTeamMember = teamData => {
         })
 }
 
-const addSecondTeamMember = teamData => {
-    return inquirer.prompt([
-        {
-            type: 'list',
-            name: 'type',
-            message: 'Do you want to add another engineer or intern?',
-            choices: ["engineer", "intern"],
-        }]).then(choice => {
-            if (choice.type === "engineer") {
-                return inquirer.prompt([
-                    {
-                        type: 'input',
-                        name: 'engineerName',
-                        message: 'please enter name of engineer',
-                    },
-                    {
-                        type: 'input',
-                        name: 'engineerID',
-                        message: 'please enter his or her id',
-                    },
-                    {
-                        type: 'input',
-                        name: 'engineerEmail',
-                        message: 'please enter the email address',
-                    },
-                    {
-                        type: 'input',
-                        name: 'engineerGithub',
-                        message: 'please enter github username',
-                    },
-                    {
-                        type: 'list',
-                        name: 'type',
-                        message: 'Do you want to add another member to your team?',
-                        choices: ["y", "n"]
-                    }
-                ])
-            }
-            else {
-                return inquirer.prompt([
-                    {
-                        type: 'input',
-                        name: 'internName',
-                        message: "please enter name of intern",
-                    },
-                    {
-                        type: 'input',
-                        name: 'internID',
-                        message: "please enter his or her id",
-                    },
-                    {
-                        type: 'input',
-                        name: 'internEmail',
-                        message: 'please enter email of the intern',
-                    },
-                    {
-                        type: 'input',
-                        name: 'internSchool',
-                        message: 'please enter school intern attends',
-                    },
-                ])
-            }
-        })
-}
-
-const addThirdTeamMember = teamData => {
-    return inquirer.prompt([
-        {
-            type: 'list',
-            name: 'type',
-            message: 'Do you want to add third engineer or intern?',
-            choices: ["engineer", "intern"],
-        }]).then(choice => {
-            if (choice.type === "engineer") {
-                return inquirer.prompt([
-                    {
-                        type: 'input',
-                        name: 'engineerName',
-                        message: 'please enter name of engineer',
-                    },
-                    {
-                        type: 'input',
-                        name: 'engineerID',
-                        message: 'please enter his or her id',
-                    },
-                    {
-                        type: 'input',
-                        name: 'engineerEmail',
-                        message: 'please enter the email address',
-                    },
-                    {
-                        type: 'input',
-                        name: 'engineerGithub',
-                        message: 'please enter github username',
-                    },
-                    {
-                        type: 'list',
-                        name: 'type',
-                        message: 'Do you want to add another member to your team?',
-                        choices: ["y", "n"]
-                    }
-                ])
-            }
-            else {
-                return inquirer.prompt([
-                    {
-                        type: 'input',
-                        name: 'internName',
-                        message: "please enter name of intern",
-                    },
-                    {
-                        type: 'input',
-                        name: 'internID',
-                        message: "please enter his or her id",
-                    },
-                    {
-                        type: 'input',
-                        name: 'internEmail',
-                        message: 'please enter email of the intern',
-                    },
-                    {
-                        type: 'input',
-                        name: 'internSchool',
-                        message: 'please enter school intern attends',
-                    },
-                ])
-            }
-        })
-}
-
-module.exports = { promptManager, addThirdTeamMember, addSecondTeamMember, addTeamMember};
+module.exports = { promptManager, addTeamMember};
