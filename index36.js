@@ -1,11 +1,9 @@
 const {promptManager, addTeamMember} = require("./src/inquirer5.js");
-// const inquirer = require('inquirer');
-// const getManager = require('./src/parseData');
+const buildDataArray = require('./lib/Employee');
+const parseData3 = require('./src/parseData3');
 promptManager()
   .then(teamData => {  dataArray = [];
-    // console.log('continue');
     dataArray.push(teamData);
-    // console.log(dataArray);
   })
   .then(addTeamMember)
   .then(teamData => {
@@ -17,6 +15,8 @@ promptManager()
     dataArray.push(teamData);
     console.log(dataArray);
     console.log('end');
-    return dataArray 
-  })
+    // return dataArray 
+    buildDataArray(dataArray)
+    parseData3(dataArray)
+})
 // module.exports = dataArray;
