@@ -19,4 +19,4 @@ promptManager()
     console.log('end');
     return dataArray 
   })
-module.exports = dataArray;
+// module.exports = dataArray;
