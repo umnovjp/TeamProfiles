@@ -5,19 +5,19 @@ const promptManager = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'managerName', // changed managerName to name
+            name: 'name0', // changed managerName to name
             message: 'please enter name of the project manager',
             validate: val => /[a-z1-9]/gi.test(val),
         },
         {
             type: 'input',
-            name: 'managerID',
+            name: 'id0',
             message: 'what is his or hers or its id?',
             validate: val => /[1-9]/gi.test(val),
         },
         {
             type: 'input',
-            name: 'managerEmail',
+            name: 'email0',
             message: "enter manager's email",
             validate: val => /[a-z1-9]/gi.test(val),
         },
@@ -58,7 +58,7 @@ const addTeamMember = teamData => {
                     },
                     {
                         type: 'input',
-                        name: 'engineerGithub',
+                        name: 'github',
                         message: 'please enter github username',
                     },
                 ])
@@ -82,7 +82,7 @@ const addTeamMember = teamData => {
                     },
                     {
                         type: 'input',
-                        name: 'internSchool',
+                        name: 'school',
                         message: 'please enter school intern attends',
                     },
                 ])

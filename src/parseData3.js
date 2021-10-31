@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const parseData3 = (data) => {
     console.log(data[0]);
-    console.log('parseData file');
+    console.log('in parseData file');
 
 
 let nameVar0 = data[0].name0;
@@ -12,8 +12,16 @@ let nameVar0 = data[0].name0;
     let nameVar1 = data[1].name0;
     let idVar1 = data[1].id0;
     let emailVar1 = data[1].email0;
-    let github = data[1].engineerGithub;
-    let githubURL = 'https://www.github.com/' + github; 
+    const object1 = data[1];
+    
+    const keyArray = Object.keys(object1);
+    const forthTitle = keyArray[3];
+    const valueArray = Object.values(object1);
+    const forthVar = valueArray[3];
+    if (forthTitle = 'github') {forthLink = 'https://www.github.com/' + forthVar}
+    else if (forthTitle = 'school') {forthLink = 'https://www.' + forthVar + '.edu'}
+    else (console.log('error'))
+    
     let layout = `<!DOCTYPE html>
     <html lang="en-US">
     
@@ -35,7 +43,7 @@ let nameVar0 = data[0].name0;
               <p class = 'headSection'>
                   <a class = 'bodySection'> id: ${idVar1} </a><br>
                   <a class = 'bodySection'> email: <a href = 'mailto:'> ${emailVar1} </a>  </a><br>
-                  <a class = 'bodySection'> github: <a href = ${githubURL}> ${github} </a> </a>
+                  <a class = 'bodySection'> ${forthTitle}: <a href = ${forthLink}}> ${forthVar} </a> </a>
               </p>
           </div>    
       </body>
