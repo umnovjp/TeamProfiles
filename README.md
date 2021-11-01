@@ -9,6 +9,7 @@ When I start the application, I am prompted to enter the team manager’s name, 
 THEN I am prompted to enter the intern’s name, ID, email, and school. 
 # Future Work
 As I mentioned, this version is not perfect or final. I will add a couple of other features later. I will add an option to add more team members. Also, test using Jest is not working yet. I created __test__ folder with relevant files. This jest package is less relevant for me as a manufacturing engineer. It will wait. 
+
 ![image](https://user-images.githubusercontent.com/88174852/139618766-631319df-4516-4bc0-8fa5-a6cfd0409e24.png)
 Will ask a tutor to help later. I was a nice experience. I feel I am getting better in creating functions and debugging problems. Thank you for reading. 
 
