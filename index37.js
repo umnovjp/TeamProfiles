@@ -16,7 +16,7 @@ promptManager()
       addTeamMember();
       dataArray.push(teamData);
       param = teamData.toAddOrNotToAdd;
-      console.log(param + ' in the loop')
+      console.log(param + ' in the loop');
     }
     console.log(teamData.toAddOrNotToAdd);
     console.log('end2');
