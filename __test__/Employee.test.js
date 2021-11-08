@@ -4,7 +4,7 @@ describe ('Employee', () => {
         const employee = new Employee ('John', 12, 'qwerty@yahoo.com0');
         expect(employee.name).toEqual('John');
         expect(employee.id).toEqual(12);
-        expect(employee.email).toEqual('qwert@yahoo.com');
+        expect(employee.email).toEqual('qwerty@yahoo.com');
     });
 describe ('returns Employee name', () => {
     it ('should return Employee name', () => {
