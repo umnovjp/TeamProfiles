@@ -6,15 +6,13 @@ describe ('Engineer', () => {
     });
 describe ('returns Engineer github', () => {
     it ('should return Engineer github', () => {
-        const employeeIndex = 1;
-        const result = new Engineer().getGithub(employeeIndex);
-        expect(result).toEqual(getName(employeeIndex).github);
+        const result = new Engineer().getGithub();
+        expect(result).toEqual(getGithub());
     });
 });
 describe ('returns Employee role', () => {
     it ('should return Employee role', () => {
-        const employeeIndex = 0;
-        const result = new Engineer().getRole(employeeIndex);
+        const result = new Engineer().getRole();
         expect(result).toEqual('Engineer');
     });
 });

@@ -6,15 +6,13 @@ describe ('Intern', () => {
     });
 describe ('returns Intern school', () => {
     it ('should return Intern school', () => {
-        const employeeIndex = 2;
-        const result = new Intern().getSchool(employeeIndex);
-        expect(result).toEqual(getSchool(employeeIndex).school);
+        const result = new Intern().getSchool();
+        expect(result).toEqual(getSchool());
     });
 });
 describe ('returns Employee role', () => {
     it ('should return Employee role', () => {
-        const employeeIndex = 2;
-        const result = new Intern().getRole(employeeIndex);
+        const result = new Intern().getRole();
         expect(result).toEqual('Intern');
     });
 });

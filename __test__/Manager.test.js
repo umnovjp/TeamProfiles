@@ -6,15 +6,13 @@ describe ('manager', () => {
     });
 describe ('returns Manager Office number', () => {
     it ('should return manager office number', () => {
-        const employeeIndex = 0;
-        const result = new Manager().officeNumber(employeeIndex);
-        expect(result).toEqual(officeNumber(employeeIndex).school);
+        const result = new Manager().officeNumber();
+        expect(result).toEqual(officeNumber());
     });
 });
 describe ('returns Employee role', () => {
     it ('should return Employee role', () => {
-        const employeeIndex = 0;
-        const result = new Manager().getRole(employeeIndex);
+        const result = new Manager().getRole();
         expect(result).toEqual('Manager');
     });
 });

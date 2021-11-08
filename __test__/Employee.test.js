@@ -8,29 +8,25 @@ describe ('Employee', () => {
     });
 describe ('returns Employee name', () => {
     it ('should return Employee name', () => {
-        const employeeIndex = 0;
-        const result = new Employee().getName(employeeIndex);
-        expect(result).toEqual(getName(employeeIndex).name0);
+        const result = new Employee().getName();
+        expect(result).toEqual(getName());
     });
 });
 describe ('returns Employee id', () => {
     it ('should return Employee id', () => {
-        const employeeIndex = 0;
-        const result = new Employee().getId(employeeIndex);
-        expect(result).toEqual(getId(employeeIndex).id0);
+        const result = new Employee().getId();
+        expect(result).toEqual(getId());
     });
 });
 describe ('returns Employee email', () => {
     it ('should return Employee email', () => {
-        const employeeIndex = 0;
-        const result = new Employee().getEmail(employeeIndex);
-        expect(result).toEqual(getEmail(employeeIndex).email0);
+        const result = new Employee().getEmail();
+        expect(result).toEqual(getEmail());
     });
 });
 describe ('returns Employee role', () => {
     it ('should return Employee role', () => {
-        const employeeIndex = 0;
-        const result = new Employee().getRole(employeeIndex);
+        const result = new Employee().getRole();
         expect(result).toEqual('Employee');
     });
 });
