@@ -1,4 +1,4 @@
-const Engineer = require('../lib/Engineer');
+const { Engineer } = require('../lib/Engineer');
 describe ('Engineer', () => {
     it ('should create new Engineer extending Employee class with getGithub pointing to his github page', () => {
         const engineer = new Engineer ('umnovjp');

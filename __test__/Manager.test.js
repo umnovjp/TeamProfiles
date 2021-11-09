@@ -1,4 +1,4 @@
-const Manager = require('../lib/Manager');
+const { Manager } = require('../lib/Manager');
 describe ('manager', () => {
     it ('should create new Manager extending Employee class with officeNumber pointing to his office Number', () => {
         const manager = new Manager (12345);

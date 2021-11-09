@@ -1,4 +1,4 @@
-const Intern = require('../lib/Intern');
+const { Intern } = require('../lib/Intern');
 describe ('Intern', () => {
     it ('should create new Intern extending Employee class with school pointing to his school', () => {
         const intern = new Intern ('Harvard');
