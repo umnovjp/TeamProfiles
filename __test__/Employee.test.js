@@ -1,4 +1,4 @@
-const Employee = require('../lib/Employee');
+const { Employee } = require('../lib/Employee');
 describe ('Employee', () => {
     it ('should create new Employee with name, id, email provided valid arguments', () => {
         const employee = new Employee ('John', 12, 'qwerty@yahoo.com0');
