@@ -16,7 +16,7 @@ promptManager()
     console.log(dataArray);
     console.log('end');
     // return dataArray 
-    buildDataArray(dataArray)
+    //buildDataArray(dataArray)
     parseData3(dataArray)
 })
 // module.exports = dataArray;
