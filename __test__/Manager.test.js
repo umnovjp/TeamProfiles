@@ -1,19 +1,17 @@
-const { Manager } = require('../lib/Manager');
-describe ('manager', () => {
-    it ('should create new Manager extending Employee class with officeNumber pointing to his office Number', () => {
-        const manager = new Manager (12345);
-        expect(manager.officeNumber).toEqual(12345);
+const Employee = require('../Lib/Employee')
+const Manager = require('../Lib/Manager')
+
+describe('Manager', () => {
+    it('should create new Manager extending Employee class with officeNumber pointing to his office Number', () => {
+        const officeNumber = '12345';
+        const manager = new Manager('Jo3 Bid3n', 12, 'Jo3Bid3n@gmail.com', officeNumber);
+        expect(manager.officeNumber).toEqual(officeNumber);
     });
-describe ('returns Manager Office number', () => {
-    it ('should return manager office number', () => {
-        const result = new Manager().officeNumber();
-        expect(result).toEqual(officeNumber());
+})
+describe('Manager', () => {
+    it('returns Employee role', () => {
+        const role = 'Manager';
+        const result = new Manager('Jo3 Bid3n', 12, 'Jo3Bid3n@gmail.com', '12345');
+        expect(result.getRole()).toEqual(role);
     });
-});
-describe ('returns Employee role', () => {
-    it ('should return Employee role', () => {
-        const result = new Manager().getRole();
-        expect(result).toEqual('Manager');
-    });
-});
-});
+})

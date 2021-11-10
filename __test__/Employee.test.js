@@ -1,33 +1,35 @@
-const { Employee } = require('../lib/Employee');
-describe ('Employee', () => {
-    it ('should create new Employee with name, id, email provided valid arguments', () => {
-        const employee = new Employee ('John', 12, 'qwerty@yahoo.com0');
-        expect(employee.name).toEqual('John');
-        expect(employee.id).toEqual(12);
-        expect(employee.email).toEqual('qwerty@yahoo.com');
+const Employee = require('../Lib/Employee')
+describe('Employee', () => {
+    it('should create new Employee with name, id, email provided valid arguments', () => {
+        const employee = new Employee()
+        expect(typeof(employee)).toEqual('object')
     });
-describe ('returns Employee name', () => {
-    it ('should return Employee name', () => {
-        const result = new Employee().getName();
-        expect(result).toEqual(getName());
+})
+describe('Employee', () => {
+    it('returns Employee name', () => {
+        const name = 'John';
+        const employee = new Employee(name);
+        expect(employee.name).toEqual(name);
     });
-});
-describe ('returns Employee id', () => {
-    it ('should return Employee id', () => {
-        const result = new Employee().getId();
-        expect(result).toEqual(getId());
+})
+describe('Employee', () => {
+    it('should return Employee email', () => {
+        const id = 12;
+        const result = new Employee('John', id);     
+        expect(result.id).toEqual(id);
     });
-});
-describe ('returns Employee email', () => {
-    it ('should return Employee email', () => {
-        const result = new Employee().getEmail();
-        expect(result).toEqual(getEmail());
+})
+describe('Employee', () => {
+    it('should return Employee email', () => {
+        const email = 'abc@nowhere.com';
+        const result = new Employee('John', 12, email);  
+        expect(result.email).toEqual(email);
     });
-});
-describe ('returns Employee role', () => {
-    it ('should return Employee role', () => {
-        const result = new Employee().getRole();
-        expect(result).toEqual('Employee');
+})
+describe('Employee', () => {
+    it('should return Employee role', () => {
+        const role = 'Employee';
+        const result = new Employee('John', 1, 'abc@nowhere.com');     
+        expect(result.getRole()).toEqual(role)
     });
-});
-});
+})
